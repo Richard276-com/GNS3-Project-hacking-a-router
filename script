@@ -21,7 +21,7 @@ def test_password(password, result_queue):
         pass
 
 def main():
-    print(f"🔐 TELNET CRACKER - Versione System Command")
+    print(f" TELNET CRACKER - Versione System Command")
     print("=" * 50)
     
     result_queue = queue.Queue()
@@ -39,12 +39,12 @@ def main():
     while all(t.is_alive() for t in threads):
         if not result_queue.empty():
             trovata = result_queue.get()
-            print(f"\n✅ Password trovata: {trovata}")
+            print(f"\n Password trovata: {trovata}")
             break
         time.sleep(0.1)
     
     elapsed = time.time() - start_time
-    print(f"⏱️ Tempo: {elapsed:.2f} secondi")
+    print(f" Tempo: {elapsed:.2f} secondi")
 
 if __name__ == "__main__":
     main()
